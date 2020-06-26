@@ -1,0 +1,109 @@
+/* Pour pouvoir utiliser une hauteur (height) ou une hauteur minimale
+   (min-height) sur un bloc, il faut que son parent direct ait lui-même une
+   hauteur déterminée (donc toute valeur de height sauf "auto": hauteur en
+   pixels, em, autres unités...).
+   Si la hauteur du parent est en pourcentage, elle se réfère alors à la
+   hauteur du «grand-père», et ainsi de suite.
+   Pour pouvoir utiliser un "min-height: 100%" sur div#global, il nous faut:
+   - un parent (body) en "height: 100%";
+   - le parent de body également en "height: 100%". */
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    color: #bfbfbf;
+    background: black;
+    font-family: 'Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+a {
+    color: inherit;
+}
+
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+table th {
+    text-align: center;
+}
+
+table td, table th {
+    border: 1px solid black;
+}
+
+table a {
+    text-decoration: none;
+}
+
+table .action {
+    text-align: center;
+}
+
+input, select, button {
+    background: black;
+    color: white;
+    border-color: white;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 27px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+/* Blue */
+.btnBlue {
+    background-color: #008CBA;
+}
+
+/* Blue */
+.btnOrange {
+    background-color: #db7e17;
+}
+
+/* Red */
+.btnRed {
+    background-color: #f44336;
+}
+
+/* Gray */
+.btnGray {
+    background-color: #e7e7e7;
+    color: black;
+}
+
+/* Black */
+.btnBlack {
+    background-color: #555555;
+}
+
+
+.titlePost {
+    margin-bottom: 0;
+}
+
+#global {
+    min-height: 100vh; /* Voir commentaire sur html et body plus haut */
+    background: #333534;
+    width: 70%;
+    margin: auto; /* Permet de centrer la div */
+    text-align: justify;
+    padding: 5px 20px;
+}
+
